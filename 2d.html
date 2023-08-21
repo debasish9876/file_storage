@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FAQs</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: slategray;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.question-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.question {
+background-color: #fff;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+padding: 10px 20px;
+margin-bottom: 10px;
+}
+
+.question-title {
+font-size: 20px;
+font-weight: bold;
+margin: 0;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.question-title::after {
+content: "\25bc";
+margin-left: 10px;
+font-size: 18px;
+transition: transform 0.2s;
+}
+
+.active .question-title::after {
+transform: rotate(180deg);
+}
+
+.question-content {
+margin-top: 10px;
+display: none;
+}
+
+.active .question-content {
+display: block;
+}
+
+.answer {
+background-color: #f2f2f2;
+padding: 10px 20px;
+margin-top: 10px;
+display: none;
+}
+
+.active .answer {
+display: block;
+}
+
+.algorithm {
+background-color: #f2f2f2;
+padding: 10px 20px;
+margin-top: 10px;
+display: none;
+}
+
+.active .algorithm {
+display: block;
+}
+</style>
+</head>
+<body>
+    <section id="header">
+        <div>
+            <ul id="navbar">
+              <li><a class="active" href="ayush.html">Home</a></li>
+              <li><a href="algorithm.html">Algorithms</a></li>
+              <li><a href="contact.html">contact</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="sonu.php" id="ccc">MY CODE</a></li>
+              
+              <i id="close" class="fa-solid fa-xmark"></i>
+            </ul>
+            <div class="data"><h2 style="font-family: cursive;">DSA BY Mr.Sibo Prasad Patro</h2></div>
+          </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+<h1>Algorithms based on 2 D array</h1>
+<ul class="question-list">
+
+
+
+
+
+
+
+<!-- <li class="question">
+<h2 class="question-title">What is CSS?</h2>
+<p class="question-content">CSS stands for Cascading Style Sheets and is used to style and layout web pages.</p>
+<div class="answer">
+<p>CSS is a style sheet language used to describe the presentation of a document written in HTML. CSS is used to add colors, backgrounds, fonts, and other visual styling to web pages.</p>
+<p>CSS can be used to create responsive designs that adapt to different screen sizes, and can also be used to create animations and other interactive effects on web pages.</p>
+</div>
+</li> -->
+
+    <li class="question">
+    <h2 class="question-title">Write an algorithm to construct a 2D matrix</h2>
+    <p class="question-content">[ assuming la[ ][ ] with LBR,UBR,LBC,UBC are given ]</p>
+    <div class="algorithm">
+    <pre>
+    step1 : start
+    step2 : let i,j
+    step3 : print "enter UBR and UBC"
+    step4 : read UBR and UBC
+    step5 : print "enter the elements"
+    step6 : repeat for i:=0 to UBR inc by 1
+            step6.1 : repeat for j:=0 to UBC inc by 1 
+                step6.1.1 : read la[i][j]
+            [end of inner for]
+        [end of outer for]
+    step7 : stop            
+
+    </pre>
+    </div>
+    </li>
+
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to travese the 2D matrix </h2>
+        <p class="question-content">[ assuming the la is a 2d matrix with UBR,UBC,LBR,LBC are given ] </p>
+        <div class="algorithm">
+        <pre>
+            proc_travese(la,UBR,UBC)
+            
+            step1 : start
+            step2 : let i,j
+            step3 : print "treversng the 2D matrix"
+            step4 : repeat for i:=0 to UBR inc  by 1 
+                    step4.1 : repeat for j:=0 to UBC inc by 1 
+                        step4.1.1 : process la[i][j]
+                    [end of inner for ]
+                [end of outer for ]
+            step5 : stop            
+        </pre>
+        </div>
+    </li>
+
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to traspose matrix </h2>
+        <p class="question-content">[ assuming la ,Tla is the transposed linear array and UBR , UBC given ]</p>
+        <div class="algorithm">
+        <pre>
+            proc_transpose(la,tla,ubr,ubc)
+            step1 : start
+            step2 : let i,j
+            step3 : repeat for i:=0 to UBR inc by 1
+                    step3.1 repeat for j:=0 to UBC inc by 1 
+                        step3.1.1 : set tla[i][j]=la[j][i]
+                    [end of inner if]
+                [end of outter if]
+            step4 : call_traverse(tla)
+            step5 : stop            
+        </pre>
+        </div>
+    </li>
+
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to check matrix is sparse or not</h2>
+        <p class="question-content">   </p>
+        <div class="algorithm">
+        <pre>
+        
+        </pre>
+        </div>
+    </li>
+
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to </h2>
+        <p class="question-content">   </p>
+        <div class="algorithm">
+        <pre>
+        
+        </pre>
+        </div>
+    </li>
+
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to </h2>
+        <p class="question-content">   </p>
+        <div class="algorithm">
+        <pre>
+        
+        </pre>
+        </div>
+    </li>
+
+
+
+
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var questions = document.querySelectorAll('.question');
+
+questions.forEach(function(question) {
+var questionTitle = question.querySelector('.question-title');
+questionTitle.addEventListener('click', function() {
+question.classList.toggle('active');
+});
+});
+</script></body>
+</html>

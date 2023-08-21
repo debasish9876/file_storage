@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: slategray;
+        }
+        
+        .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        }
+        
+        .question-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+        
+        .question {
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        }
+        
+        .question-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        
+        .question-title::after {
+        content: "\25bc";
+        margin-left: 10px;
+        font-size: 18px;
+        transition: transform 0.2s;
+        }
+        
+        .active .question-title::after {
+        transform: rotate(180deg);
+        }
+        
+        .question-content {
+        margin-top: 10px;
+        display: none;
+        }
+        
+        .active .question-content {
+        display: block;
+        }
+        
+        .answer {
+        background-color: #f2f2f2;
+        padding: 10px 20px;
+        margin-top: 10px;
+        display: none;
+        }
+        
+        .active .answer {
+        display: block;
+        }
+        
+        .algorithm {
+        background-color: #f2f2f2;
+        padding: 10px 20px;
+        margin-top: 10px;
+        display: none;
+        }
+        
+        .active .algorithm {
+        display: block;
+        }
+        </style>
+</head>
+<body>
+    <header id="header">
+        <a href="#"><img src="image/th.jpg" width="85" height="100" class="logo" alt=""></a>
+        <nav>
+            <ul id="navbar">
+                <li><a class="active" href="ayush.html">Home</a></li>
+                <li><a href="algorithm.html">Algorithms</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sonu.php" id="ccc">MY CODE</a></li>
+                <i id="close" class="fa-solid fa-xmark"></i>
+            </ul>
+            <div class="data"><h2 style="font-family: cursive;">DSA BY Mr.Sibo Prasad Patro</h2></div>
+        </nav>
+        
+    </header>
+
+     <div class="info">
+        <fieldset >
+            <h3 bgcolor="red">
+                <dl>Weclome to STACK  !!! <br></dl>
+                <p>In stack we have <br>
+                PUSH POP and PEEP/TRAVERSE</p>
+            </h3>
+        
+            <hr><hr><hr>
+        
+            <h2> From the application of stack <br>i. convertion of infix expression to postfix <br>ii. evalution of postfix expression
+            </h2>
+        </fieldset>
+     </div>
+
+    
+
+     <div class="container">
+        <h1>Algorithms based on STACK</h1>
+        <ul class="question-list">
+
+            <li class="question">
+                <h2 class="question-title">Write an algorithm to push an element into stack</h2>
+                <p class="question-content">[ assume la[] with max size 5 to perform push operation , top initianlly at -1]   </p>
+                <div class="algorithm">
+                <pre>
+                    proc_push(la[],top,ele)
+                    step1 : start
+                    step2 : if(top=max-1)
+                    	step2.1 : print "overflw conditim occured"
+                    	step2.2 : exit 
+                    step3 : set top = top+1
+                    step4 : set la[top]=ele
+                    step5 : stop
+                    </pre>
+                </div>
+            </li>
+
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to pop an element in stack </h2>
+        <p class="question-content"> [ assume la[] with max size 5 and top is given ]  </p>
+        <div class="algorithm">
+        <pre>
+            proc_pop(la,top)
+            step1 : start
+            step2 : let d
+            step3 : if(top== -1)
+                    step3.1 : print "underflow condition occured"
+                    step3.2 : exit
+            step4 : d=la[top]        
+            step5 : set top=top-1   
+            step6 : print " successfully poped element d",d
+            step7 : stop
+                    
+        </pre>
+        </div>
+    </li>
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to trverse a stack</h2>
+        <p class="question-content">[assume la[] with max size 5 and top is given ]   </p>
+        <div class="algorithm">
+        <pre>
+        proc_travese(la,top)
+        step1 : start
+        stet2 : let i=top
+        step3 : if(top = -1)
+               step2.1 : print " stack is empty "
+               step2.2 : exit
+        step3 : repeat while (i!=-1)
+                step4.1 : process "la[i]"
+                step4.2 : i--
+                [end of while]
+        step5 : stop               
+        </pre>
+        </div>
+    </li>
+    <li class="question">
+        <h2 class="question-title">Write an algorithm to convet iinfix expression to postfix expression </h2>
+        <p class="question-content">   </p>
+        <div class="algorithm">
+        <pre>
+        step1 : start
+        step2 : add ')' at the end of the la[] and add '(' at the stack top
+        step3 : 
+                    step3.1 : if value is operand then add to Q[]
+                    step3.2 : else if value is '(' then push into the stack[top]
+                    step3.3 : else if value is operator then
+                            step3.3.1 : if second symbol priority is less then or equal to stack[top] then 
+                                    step3.3.1.1 : pop the stack[top] operator add to Q[3] and push into the current symbol 
+
+        
+        </pre>
+        </div>
+    </li>
+
+
+        </ul>
+    </div>
+          
+    
+    <!-- <script>
+        const menuBtn = document.querySelector("#ccc");
+const closeBtn = document.querySelector("#close");
+const navbar = document.querySelector("#navbar");
+
+menuBtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+});
+
+closeBtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+}); -->
+
+    </script>
+    <script>
+        var questions = document.querySelectorAll('.question');
+        
+        questions.forEach(function(question) {
+        var questionTitle = question.querySelector('.question-title');
+        questionTitle.addEventListener('click', function() {
+        question.classList.toggle('active');
+        });
+        });
+        </script>
+    
+</body>
+</html>

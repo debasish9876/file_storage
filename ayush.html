@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header id="header">
+            <a href="#"><img src="image/th.jpg" width="85" height="100" class="logo" alt=""></a>
+            <nav>
+                <ul id="navbar">
+                    <li><a class="active" href="ayush.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithms</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sonu.php" id="ccc">My CODE</a></li>
+                    <i id="close" class="fa-solid fa-xmark"></i>
+                </ul>
+                <div class="data"><h2 style="font-family: cursive;">DSA BY Mr.Sibo Prasad Patro</h2></div>
+            </nav>
+            
+        </header>
+
+     <div class="info">
+        <fieldset >
+            <h3 bgcolor="red">
+                <dl>Hii students !!! <br></dl>
+                <p>This Website will show you All the Algorithm which we have completed in class<br>
+                Also we have all the programs for each Algorithms</p>
+            </h3>
+        
+            <hr><hr><hr>
+        
+            <h2> Guys we broadly classified all the data structer to  4 catogories  which are ARRAYS,QUEUE,STACK and LINKED LIST
+                <br>you will get all Algorithms by choosing following cards and instruction j
+            </h2>
+        </fieldset>
+     </div>
+
+    <section class="conteeeeent">
+        <div class="div1" onclick="window.location.href='array.html';">
+            <h3 class="h33">ARRAY</h3>
+        </div>
+        <div class="div2" onclick="window.location.href='stack.html';">
+            <h3 class="h33">STACK</h3>
+        </div>
+        <div class="div1" onclick="window.location.href='queue.html';">
+            <h3 class="h33" >QUEUE</h3>
+        </div>
+        <div class="div2">
+            <h3 class="h33">LINKED LIST</h3>
+        </div>
+    </section>
+    ]
+    <script>
+        const menuBtn = document.querySelector("#ccc");
+const closeBtn = document.querySelector("#close");
+const navbar = document.querySelector("#navbar");
+
+menuBtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+});
+
+closeBtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+});
+
+    </script>
+    
+</body>
+</html>

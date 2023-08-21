@@ -1,0 +1,166 @@
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: yellow;
+    box-shadow:  0 5px 15px yellowgreen;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+}
+body {
+    background: linear-gradient(to bottom right, #ddd, #999);
+    background-image: url("image/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+h3 {
+    font-size: 20px;
+    color: #666;
+}
+.logo{
+    border-radius: 30px;
+}
+
+/* / For screens larger than 768px */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+ /* For screens smaller than 768px  */
+ @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    #navbar li {
+        display: none;
+    }
+
+    #ccc {
+        display: block;
+    }
+
+    #close {
+        display: block;
+    }
+
+    #navbar.active li {
+        display: block;
+    }
+} 
+
+
+.data{
+    margin-left: 1000px;
+    margin-top: -45px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -150px;
+
+}
+
+
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px ;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 650;
+    color: gray;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+    color: red;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#navbar.active{
+    right: 0px;
+}
+.info{
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    border-radius: 5px;
+    color: powderblue;
+     
+
+}
+.arrayinfo{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+fieldset{
+    border-style: dashed;
+    background-color: skyblue;
+    border-radius: 5px;
+}
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+.div1{
+    border-radius: 25px;
+    background-color: black;
+    height: 50px;
+    width: 35%;
+    padding: 50px 10px;
+    margin-top: 70px;
+    margin-left: 60px;
+    box-shadow: 0 5px 15px yellow;
+    cursor: pointer;
+}
+.div2{
+    border-radius: 25px;
+    background-color: black;
+    height: 50px;
+    width: 35%;
+    margin-left: 780px;
+    margin-top: -149px;
+    padding: 50px 10px;
+    box-shadow: 0 5px 15px yellow;
+    cursor: pointer;
+}
+.div1:hover,.div2:hover{
+    transition: 0.4s;
+    box-shadow: 0 5px 15px red;
+}
+.h33{
+    color: whitesmoke;
+    text-align: center;
+    
+}

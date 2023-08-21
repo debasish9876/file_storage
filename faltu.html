@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .up_syccess{
+            background-color: aqua;
+            text-decoration: solid;
+            text-overflow: ellipsis;
+            
+        }
+        .file{
+            background-color: aqua;
+            height: 30px;
+            width: 100px;
+            color: black;
+            text-decoration: solid;
+        }
+        .file_input{
+            background-color: azure;
+            border-radius: 10px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message" style="display: none;"></div>
+    <script>
+        function showmessage(message, duration){
+            var messageDiv = document.getElementById("message");
+            message.Dv.innerHTML=message;
+            messageDiv.style.display="block";
+            setTimeout(function(){
+                messageDiv.style.display="none";
+            },duration);
+        }
+        var successMessage= "<?php echo isset($successMessage) ? $successMessage : ''; ?>";
+        if(successMessage !== ""){
+            showMessage(successMessage,3000);
+        }
+    </script>
+</body>
+</html>
